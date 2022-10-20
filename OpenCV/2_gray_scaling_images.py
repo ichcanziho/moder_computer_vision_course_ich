@@ -1,6 +1,14 @@
 import cv2
 from matplotlib import pyplot as plt
 
+"""
+In this lesson we'll learn to:
+
+    1: Convert a color image to grayscale
+    2: See the change in dimensions between grayscale and color images
+    
+"""
+
 
 # Define our imshow function
 def imshow(title="Image", image=None, size=10):
@@ -14,6 +22,7 @@ def imshow(title="Image", image=None, size=10):
     plt.show()
 
 
+# Load our input image
 img = cv2.imread("../SRC/images/castara.jpeg")
 imshow("Castara, Tobago", img)
 

@@ -1,6 +1,17 @@
 import cv2
 from matplotlib import pyplot as plt
 
+"""
+Welcome to your first OpenCV Lesson. Here we'll learn to:
+
+    1: Import the OpenCV Model in Python
+    2: Load Images
+    3: Display Images
+    4: Save Images
+    5: Getting the Image Dimensions
+    
+"""
+
 
 # 1: Displaying Images
 def imshow(title="", image=None):
