@@ -11,7 +11,7 @@ In this lesson we'll learn to:
 
 
 # Define our imshow function
-def imshow(title="Image", image=None, size=10):
+def imshow(title="Image", image=None, size=10, save=True):
     # we have added the size parameter to control de fig-size of the image while plotting with matplotlib, for that
     # we obtain the aspect ratio of the image dividing the width by the height.
     h, w = image.shape[0], image.shape[1]
@@ -19,11 +19,13 @@ def imshow(title="Image", image=None, size=10):
     plt.figure(figsize=(size * aspect_ratio, size))
     plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
     plt.title(title)
+    if save:
+        plt.savefig(f"../outputs/2_gray_scaling_images/{title}.png")
     plt.show()
 
 
 # Load our input image
-img = cv2.imread("../SRC/images/castara.jpeg")
+img = cv2.imread("../../SRC/images/castara.jpeg")
 imshow("Castara, Tobago", img)
 
 # We use cvtColor, to convert to grayscale

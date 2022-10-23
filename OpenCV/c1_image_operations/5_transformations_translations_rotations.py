@@ -14,7 +14,7 @@ In this lesson we'll learn to:
 
 
 # Define our imshow function
-def imshow(title="Image", img=None, size=2, save=True):
+def imshow(title="Image", img=None, size=4, save=True):
     # we have added the size parameter to control de fig-size of the image while plotting with matplotlib, for that
     # we obtain the aspect ratio of the image dividing the width by the height.
     h, w = img.shape[0], img.shape[1]
@@ -24,7 +24,7 @@ def imshow(title="Image", img=None, size=2, save=True):
     plt.axis('off')
     plt.title(title)
     if save:
-        plt.savefig(f"outputs/{title}.png")
+        plt.savefig(f"../outputs/5_transformations_translations_rotations/{title}.png")
     plt.show()
 
 # ----------------------------------------
@@ -36,7 +36,7 @@ def imshow(title="Image", img=None, size=2, save=True):
 # cv2.warpAffine(image, T, (width, height))
 
 
-image = cv2.imread('../SRC/images/Volleyball.jpeg')
+image = cv2.imread('../../SRC/images/Volleyball.jpeg')
 imshow("Original", image)
 
 # Store height and width of the image
@@ -67,7 +67,7 @@ print(height, width)
 
 # cv2.getRotationMatrix2D(rotation_center_x, rotation_center_y, angle of rotation, scale)
 # Load our image
-image = cv2.imread('../SRC/images/Volleyball.jpeg')
+image = cv2.imread('../../SRC/images/Volleyball.jpeg')
 height, width = image.shape[:2]
 
 # Divide by two to rotate the image around its centre

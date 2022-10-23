@@ -23,12 +23,12 @@ def imshow(title="Image", image=None, size=2, save=True):
     plt.axis('off')
     plt.title(title)
     if save:
-        plt.savefig(f"outputs/{title}.png")
+        plt.savefig(f"../outputs/3_color_spaces/{title}.png")
     plt.show()
 
 
 # Load our input image
-img = cv2.imread("../SRC/images/castara.jpeg")
+img = cv2.imread("../../SRC/images/castara.jpeg")
 print("Dimensions of original input image")
 print("Original", img.shape)
 # Use cv2.split to get each color space separately

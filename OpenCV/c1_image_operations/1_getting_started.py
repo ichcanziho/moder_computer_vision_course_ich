@@ -24,7 +24,7 @@ def imshow(title="", image=None):
 
 print(cv2.__version__)
 
-img = cv2.imread("../SRC/images/castara.jpeg")
+img = cv2.imread("../../SRC/images/castara.jpeg")
 
 imshow("Displaying our first image", img)
 cv2.imshow("Displaying our first image", img)
@@ -32,8 +32,8 @@ cv2.waitKey(0)
 
 # 2: Saving images
 
-cv2.imwrite("outputs/output.jpg", img)
-cv2.imwrite("outputs/output.png", img)
+cv2.imwrite("../outputs/c1_image_operations/1_getting_started/output.jpg", img)
+cv2.imwrite("../outputs/c1_image_operations/1_getting_started/output.png", img)
 
 # 3: Displaying Image Dimensions
 

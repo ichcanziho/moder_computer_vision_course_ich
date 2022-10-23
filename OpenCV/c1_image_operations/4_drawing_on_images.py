@@ -25,7 +25,7 @@ def imshow(title="Image", image=None, size=2, save=True):
     plt.axis('off')
     plt.title(title)
     if save:
-        plt.savefig(f"outputs/{title}.png")
+        plt.savefig(f"../outputs/4_drawing_on_images/{title}.png")
     plt.show()
 
 
