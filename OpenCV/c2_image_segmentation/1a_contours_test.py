@@ -33,7 +33,7 @@ thresh_skimage = (V > T).astype("uint8") * 255
 cv2.imshow("threshold_local", thresh_skimage)
 gray = cv2.cvtColor(ROI, cv2.COLOR_BGR2GRAY)
 _, th2 = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
-cv2.imshow("threshold_otsu", thresh_skimage)
+# cv2.imshow("threshold_otsu", thresh_skimage)
 cv2.waitKey(0)
 
 
