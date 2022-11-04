@@ -27,6 +27,7 @@ for c in cnts:
     break
 
 cv2.imshow("roi", ROI)
+cv2.imwrite("../../SRC/images/ine_cut.jpg", ROI)
 V = cv2.split(cv2.cvtColor(ROI, cv2.COLOR_BGR2HSV))[2]
 T = threshold_local(V, 25, offset=15, method="gaussian")
 thresh_skimage = (V > T).astype("uint8") * 255
